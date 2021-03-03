@@ -16,9 +16,9 @@
 var distributeCandies = function(candyType) {
   const maxCandyLength = Math.ceil(candyType.length / 2)
   const candiesEaten = candyType.reduce((res, v, i) => {
-      res[v] = res[v] || 1
-      res[v] += 1
-      return res
+    res[v] = res[v] || 1
+    res[v] += 1
+    return res
   }, {})
   const numOfCandyTypes = Object.keys(candiesEaten).length
   const result = numOfCandyTypes > maxCandyLength ? maxCandyLength : numOfCandyTypes
